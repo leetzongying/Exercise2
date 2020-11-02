@@ -19,7 +19,7 @@ public class Exercise2 {
 	printMath3();
 	printLoop();
     printAverage();
-	printExp1();
+	printRectangle();
     printExp2();
 	}
 
@@ -86,8 +86,14 @@ public class Exercise2 {
     	int no3 = in.nextInt();
     	System.out.println("Average of numbers are:" + ((no1 + no2 + no3)/3) );
     }
-    public static void printExp1() {
-    	System.out.print((25.5 * 3.5 - 3.5 * 3.5) / (40.5 - 4.5));
+    public static void printRectangle() {
+    	Scanner in=new Scanner(System.in);
+    	System.out.print("Insert width:");
+    	int width = in.nextInt();
+    	System.out.print("Insert height:");
+    	int height = in.nextInt();
+    	System.out.println("Area of rectangle is:" + (width*height));
+    	System.out.println("Perimeter of rectangle is:" + 2*(width + height));
     }
     public static void printExp2() {
     	System.out.print("\n" + 4.0 * (1 - (1.0/3) + (1.0/5) - (1.0/7) + (1.0/9) - (1.0/11)));
