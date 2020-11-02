@@ -42,10 +42,23 @@ public class Exercise2 {
     	System.out.println("Division of two numbers is:" + total);
 }
     public static void printMath() {
-    	System.out.print(-5+8*6 + "\n");
-    	System.out.print((55+9) % 9 + "\n");
-        System.out.print(20 + -3*5 / 8 + "\n");
-        System.out.print(5 + 15 / 3 * 2 - 8 % 3 + "\n");			
+    	Scanner in=new Scanner(System.in);
+    	System.out.print("Input first integer:");
+    	int integer1 = in.nextInt();
+    	System.out.print("Input second integer:");
+    	int integer2 = in.nextInt();
+    	if (integer1 == integer2)
+    		System.out.printf("%d == %d\n" , integer1, integer2);
+    	if ( integer1 != integer2 )          
+            System.out.printf( "%d != %d\n", integer1, integer2 );  
+        if ( integer1 < integer2 )          
+            System.out.printf( "%d < %d\n", integer1, integer2 );  
+        if ( integer1 > integer2 )          
+            System.out.printf( "%d > %d\n", integer1, integer2 );  
+        if ( integer1 <= integer2 )          
+            System.out.printf( "%d <= %d\n", integer1, integer2 );  
+        if ( integer1 >= integer2 )          
+            System.out.printf( "%d >= %d\n", integer1, integer2 );  
     }
     public static void printMath2() {
     	Scanner in=new Scanner(System.in);
@@ -96,7 +109,18 @@ public class Exercise2 {
     	System.out.println("Perimeter of rectangle is:" + 2*(width + height));
     }
     public static void printExp2() {
-    	System.out.print("\n" + 4.0 * (1 - (1.0/3) + (1.0/5) - (1.0/7) + (1.0/9) - (1.0/11)));
+    	int amount = 0;
+		for(int i = 1; i <= 4; i++){
+			for(int j = 1; j <= 4; j++){
+				for(int k = 1; k <= 4; k++){
+					if(k != i && k != j && i != j){
+						amount++;
+						System.out.println(i + "" + j + "" + k);
+					}
+				}
+			}
+		}
+		System.out.println("Total number of the unique three-digit-number is " + amount);
     }
 }
 
